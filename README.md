@@ -4,13 +4,13 @@ A curated repository for feature-selection research implementations focused on o
 
 ## Implemented Methods
 
-- Improved filter-ranking incorporated binary black-hole algorithm for feature selection  
+- [Improved filter-ranking incorporated binary black-hole algorithm for feature selection](https://link.springer.com/article/10.1007/s42979-021-00933-w)  
   Authors: Prasad Ovhal, Shubham Kulkarni, Jayaraman K Valadi
-- Twin and multiple black-holes algorithm for feature selection  
+- [Twin and multiple black-holes algorithm for feature selection](https://ieeexplore.ieee.org/abstract/document/9242882/)  
   Authors: Prasad T Ovhal, Jayaraman K Valadi, Aamod Sane
-- Intrusion detection with black-hole feature selection  
+- [Intrusion detection with black-hole feature selection](https://link.springer.com/chapter/10.1007/978-981-99-2468-4_9)  
   Authors: Shubham Kulkarni, Prasad Ovhal, Jayaraman K Valadi
-- Improving black-hole algorithm performance by coupling with genetic algorithm for feature selection  
+- [Improving black-hole algorithm performance by coupling with genetic algorithm for feature selection](https://link.springer.com/chapter/10.1007/978-981-16-9416-5_26)  
   Authors: Hrushikesh Bhosale, Prasad Ovhal, Aamod Sane, Jayaraman K Valadi
 
 ## Datasets
