@@ -1,0 +1,13 @@
+dataset,No. of features,No. of instances,No. of classes
+./datsets/biodeg.csv,42,1055,2
+./datsets/BreastEW.csv,31,568,2
+./datsets/Cardiotocography.xls,22,2126,3
+./datsets/colon.csv,2001,62,2
+./datsets/derm.csv,35,366,6
+./datsets/HeartEW.csv,14,269,2
+./datsets/IonosphereEW.csv,34,350,2
+./datsets/leukemia.csv,7130,71,2
+./datsets/spambase.csv,58,4601,2
+./datsets/steel-plates-fault_csv.csv,34,1941,2
+./datsets/WaveformEW.csv,41,4999,3
+./datsets/WineEW.csv,14,177,3

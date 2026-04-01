@@ -1,16 +1,29 @@
+"""Preprocessing utilities for tabular datasets."""
+
+from __future__ import annotations
 
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
-def preprocess(df: pd.DataFrame):
-    """Preprocess dataset (encode + normalize)."""
-    X = df.iloc[:, :-1]
-    y = df.iloc[:, -1]
 
-    X.fillna(0, inplace=True)
+def preprocess_dataframe(
+    df: pd.DataFrame,
+    drop_constant_features: bool = False,
+) -> tuple[pd.DataFrame, pd.Series]:
+    """Encode target labels, scale features, and optionally drop constants."""
+    x_features = df.iloc[:, :-1].copy()
+    y_target = df.iloc[:, -1].copy()
 
-    if y.dtype == 'object':
-        y = pd.Series(LabelEncoder().fit_transform(y))
+    x_features = x_features.fillna(0)
 
-    X = pd.DataFrame(MinMaxScaler().fit_transform(X))
-    return X, y
+    if y_target.dtype == "object":
+        y_target = pd.Series(LabelEncoder().fit_transform(y_target))
+
+    x_features = pd.DataFrame(MinMaxScaler().fit_transform(x_features))
+
+    if drop_constant_features:
+        nunique = x_features.nunique()
+        x_features = x_features.loc[:, nunique > 1].copy()
+        x_features.columns = range(x_features.shape[1])
+
+    return x_features, y_target
